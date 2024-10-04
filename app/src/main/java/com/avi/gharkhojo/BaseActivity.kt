@@ -13,6 +13,7 @@ open class BaseActivity : AppCompatActivity() {
         saveLastUsedActivity()
     }
 
+
     private fun saveLastUsedActivity() {
         val sharedPref = getSharedPreferences("AppPreferences", Context.MODE_PRIVATE)
         val className = javaClass.name
