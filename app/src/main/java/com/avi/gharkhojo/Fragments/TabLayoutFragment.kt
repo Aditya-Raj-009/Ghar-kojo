@@ -50,8 +50,14 @@ class TabLayoutFragment : Fragment() {
         if(post==null){
             Toast.makeText(context, "Post is null", Toast.LENGTH_SHORT).show()
         }else{
-           filterCategories?.addAll(post?.imageList?.keys!!.filter { post!!.imageList[it]?.size!=0 })
             filterCategories?.add(0, "All")
+           filterCategories?.addAll(post?.imageList?.keys!!.filter { post!!.imageList[it]?.size!=0 && it!="Extra" })
+            if(post?.imageList?.get("Extra")?.size!=0){
+                filterCategories?.add("Extra")
+            }
+
+        }
+        if(filterCategories!=null){
             currentFilter = "All"
         }
         return binding.root
