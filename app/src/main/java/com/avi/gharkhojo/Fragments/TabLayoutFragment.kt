@@ -56,6 +56,7 @@ class TabLayoutFragment : Fragment() {
                 filterCategories?.add("Extra")
             }
         }
+
         if(filterCategories!=null){
             currentFilter = "All"
         }
