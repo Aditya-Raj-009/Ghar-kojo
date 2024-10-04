@@ -55,7 +55,6 @@ class TabLayoutFragment : Fragment() {
             if(post?.imageList?.get("Extra")?.size!=0){
                 filterCategories?.add("Extra")
             }
-
         }
         if(filterCategories!=null){
             currentFilter = "All"
